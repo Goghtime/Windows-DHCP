@@ -5,7 +5,7 @@ param(
 
 
 # Load DHCP server information
-$DHCPinfo = Get-Content -Path "C:\Projects\Windows-DHCP\env.json" | ConvertFrom-Json
+$DHCPinfo = Get-Content -Path "$PSScriptRoot\env.json" | ConvertFrom-Json
 $dhcpServer = $DHCPinfo.Primary.FQDN
 
 # Present a list of scopes and get user choice
